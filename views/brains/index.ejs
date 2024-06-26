@@ -1,0 +1,28 @@
+<!-- views/fruits/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brains Index</title>
+    <a href="/brains/new" class="link">Add New Brain Part</a>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Link to CSS file -->
+  </head>
+<!-- views/fruits/index.ejs -->
+
+<!-- views/fruits/index.ejs -->
+
+<body>
+    <h1>BRAIN ATLAS</h1>
+    <ul>
+      <% brains.forEach(brain => { %>
+        <li>
+          <a href="/brains/<%= brain._id %>"> <%= brain.name %> </a>
+        </li>
+      <% }); %>
+    </ul>
+  </body>
+  
+  
+</html>

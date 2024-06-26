@@ -1,0 +1,60 @@
+body {
+    background-image: url('/images/brain.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 500px;
+    flex-direction: column;
+    background-image: url('/images/brainAtlas.png');
+    background-size: cover; /* Ensure the background image covers the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 80px;
+    background-color: antiquewhite;
+}
+
+h2 {
+    font-size: 42px;
+    background-color: antiquewhite;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 26px;
+}
+
+li {
+    font-size: 46px;
+}
+
+.link {
+    font-size: 60px;
+}
+
+.newBrainPage {
+    background-image: url('/images/pic.png');
+    background-size: cover; /* Ensure the background image covers the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+
+
+}
+
+label, input, select, button, a {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1.5em; /* Increase font size */
+  }
+
+.Back {
+    font-size: 32px;
+}
+
+.Back2 {
+    font-size: 32px;
+    justify-content: center;
+}

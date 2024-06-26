@@ -1,0 +1,42 @@
+<!-- views/fruits/show.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= brain.name %></title> <!-- Dynamic title based on fruit name -->
+  </head>
+  <!-- views/fruits/show.ejs -->
+
+<body>
+    <h1><%= brain.name %></h1>
+    <!-- Conditional rendering based on fruit's readiness -->
+    <% if (brain.isBilateral) { %>
+      <p>This brain structures is found in both hemisphere!</p>
+    <% } else { %>
+      <p>This brain structures is not found in both hemisphere!</p>
+    <% } %>
+
+    <% if (brain.lobe === 'frontal') { %>
+        <p>And it is part of the frontal lobe.</p>
+      <% } else if (brain.lobe === 'parietal') { %>
+        <p>And it is part of the parietal lobe.</p>
+      <% } else if (brain.lobe === 'temporal') { %>
+        <p>And it is part of the temporal lobe.</p>
+      <% } else if (brain.lobe === 'occipital') { %>
+        <p>And it is part of the occipital lobe.</p>
+      <% } %>
+    
+
+
+    <!-- new delete button -->
+<form action="/brains/<%=brain._id%>?_method=DELETE" method="POST">
+    <button type="submit">Delete <%= brain.name %></button>
+  </form>
+    <a href="/brains/<%= brain._id %>/edit">Edit <%= brain.name %></a>
+    <a href="/brains/">Back to Brains</a>
+
+  </body>
+  
+</html>

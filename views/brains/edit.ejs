@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Brain</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Update the header -->
+    <h1>Edit <%= brain.name %></h1>
+
+    <!-- Update form -->
+    <form action="/brains/<%= brain._id %>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= brain.name %>" />
+<!-- 
+        <input type="checkbox" name="isReadyToEat" />
+
+        <input type="checkbox" name="isReadyToEat" checked /> -->
+
+        <label for="isBilateral">is this Bilateral?</label>
+        <input type="checkbox" name="isBilateral" <% if (brain.isBilateral) { %>checked<% } %> >
+
+
+        <button type="submit">Update Brain</button>
+        <a class="Back2" href="/brains">Back to Brains</a>
+    </form>
+
+
+</body>
+</html>

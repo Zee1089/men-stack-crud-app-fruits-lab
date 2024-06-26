@@ -1,0 +1,35 @@
+<!-- views/fruits/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chose a brain location</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Link to CSS file -->
+  </head>
+  <body class = "newBrainPage">
+    <h1>Create a brain structure and add to the Brain Atlas</h1>
+    <form action="/brains" method="POST">
+     
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" />
+
+
+        <label for="isBilateral">Is this Bilateral?</label>
+        <input type="checkbox" name="isBilateral" id="isBilateral" />
+
+        <label for="lobe">Lobe:</label>
+        <select id="lobe" name="lobe">
+          <option value="frontal">Frontal</option>
+          <option value="parietal">Parietal</option>
+          <option value="temporal">Temporal</option>
+          <option value="occipital">Occipital</option>
+        </select>
+ 
+        <button type="submit">Add</button>
+        <a class="Back" href="/brains/">Back to the Atlas</a>
+   
+      </form>
+  </body>
+</html>
